@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed El Idrissi Laoukili - AI & Software Engineer</title>
+
+    <link rel="icon" type="image/png" href="https://elidrissilaoukili.netlify.app/assets/images/global/favicon.png">
+
+    <meta name="description" content="Mohammed El Idrissi Laoukili - AI Developer and Software Engineer specializing in Machine Learning, Spring Boot, React.js, and Laravel. Explore my projects and skills.">
+    <meta name="keywords" content="Mohammed El Idrissi Laoukili, AI Developer, Software Engineer, Machine Learning, java, Spring Boot, React.js, Laravel, Laravel 11, Morocco">
+    <meta name="author" content="Mohammed El Idrissi Laoukili">
+    
+    <!-- Open Graph for better social media visibility -->
+    <meta property="og:title" content="Mohammed El Idrissi Laoukili - AI & Software Engineer">
+    <meta property="og:description" content="Explore my projects in AI, Machine Learning, Spring Boot, React.js, and Laravel.">
+    <meta property="og:image" content="https://elidrissilaoukili.netlify.app/assets/images/global/meee.jpg">
+    <meta property="og:url" content="https://elidrissilaoukili.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Schema Markup for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammed El Idrissi Laoukili",
+      "jobTitle": "AI Developer & Software Engineer",
+      "url": "https://elidrissilaoukili.github.io",
+      "sameAs": [
+        "https://github.com/elidrissilaoukili",
+        "https://www.linkedin.com/in/elidrissilaoukili",
+        "https://www.instagram.com/__elidrissii",
+        "https://www.youtube.com/@idricoding"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"> -->
+    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/style.css">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md py-4 px-6 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-600">Idricodi</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="/" class="hover:text-blue-600">Home</a></li>
+                <li><a href="./projects.html" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="./skills.html" class="hover:text-blue-600">Skills</a></li>
+                <li><a href="./terminalprojects.html" class="hover:text-blue-600">Terminal Projects</a></li>
+            </ul>
+            <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" style="z-index: 100;"
+        class="hidden md:hidden fixed top-16 left-0 w-full bg-white shadow-md py-4 px-6">
+        <ul class="space-y-4">
+            <li><a href="/" class="block hover:text-blue-600">Home</a></li>
+            <li><a href="./projects.html" class="block hover:text-blue-600">Projects</a></li>
+            <li><a href="./skills.html" class="block hover:text-blue-600">Skills</a></li>
+            <li><a href="./terminalprojects.html" class="block hover:text-blue-600">Terminal Projects</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Project Details Page -->
+    <div class="flex justify-center py-6 px-1 mt-12" id="projectNotFound">
+        <div class=" max-w-4xl w-full p-6">
+            <!-- Project Title & Date -->
+            <div class="text-center mb-6">
+                <h1 id="projectTitle" class="text-3xl font-bold"></h1>
+                <p id="projectDate" class="text-gray-500 text-sm"></p>
+            </div>
+
+            <!-- Technologies Used -->
+            <div class="my-6">
+                <h2 class="text-xl font-semibold">Technologies Used</h2>
+                <div id="technologiesList" class="flex flex-wrap gap-2 mt-2">
+                    <!-- Technologies will be injected here -->
+                </div>
+            </div>
+
+            <!-- Media Section -->
+            <div id="projectMedia" class="mb-6 flex justify-center">
+                <!-- Image/Video will be injected here -->
+            </div>
+
+            <!-- Hosted Link -->
+            <div class="my-6">
+                <h2 class="text-xl font-semibold">Hosted On</h2>
+                <a id="hostedLink" href="#" target="_blank" class="text-blue-500 hover:underline"></a>
+            </div>
+
+            <!-- Source Code Button -->
+            <div id="projectSource" class="mb-4 hidden text-center">
+                <a id="sourceCodeLink" href="#" target="_blank"
+                    class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
+                    View Source Code
+                </a>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-6">
+                <h2 class="text-xl font-semibold">Description</h2>
+                <!-- <p id="projectDescription" class="text-gray-700 mt-2 text-justify"></p> -->
+                <div id="projectDescription" class="text-gray-700 mt-2 whitespace-pre-line"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="max-w-5xl mx-auto mt-20 p-6">
+        <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
+            <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                data-filter="all">All</button>
+            <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+                data-filter="springboot">Spring Boot</button>
+            <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+                data-filter="laravel">Laravel</button>
+            <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400" data-filter="nativephp">Native
+                PHP</button>
+            <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+                data-filter="reactjs">React.js</button>
+            <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
+                data-filter="templates">Templates</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Projects will be inserted dynamically here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md mt-12 py-6 text-center">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4 mb-4">
+                <a href="https://github.com/elidrissilaoukili" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 hover:text-blue-600">GitHub</a>
+                <a href="https://codepen.io/elidrissilaoukili" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 hover:text-blue-600">CodePen</a>
+                <a href="https://www.linkedin.com/in/elidrissilaoukili" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 hover:text-blue-600">LinkedIn</a>
+                <a href="https://www.instagram.com/__elidrissii" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 hover:text-blue-600">Instagram</a>
+                <a href="https://wa.me/212767194500" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 hover:text-blue-600">WhatsApp</a>
+                <a href="https://www.youtube.com/@idricoding" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-600 hover:text-blue-600">YouTube</a>
+            </div>
+            <div class="text-sm text-gray-500 flex flex-col items-center space-y-1">
+                <a href="mailto:elidrissilaoukili@gmail.com" class="flex items-center space-x-2">
+                    ✉️ <span>elidrissilaoukili@gmail.com</span>
+                </a>
+                <a href="tel:+212767194500" class="flex items-center space-x-2">
+                    📞 <span>+212 767194500</span>
+                </a>
+            </div>
+            <p class="text-xs text-gray-400 mt-4">&copy; <span id="year"></span> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://elidrissilaoukili.netlify.app/assets/js/projectDetailsLoader.js"></script>
+    <script src="https://elidrissilaoukili.netlify.app/assets/js/projectsLoader.js"></script>
+    <script src="https://elidrissilaoukili.netlify.app/assets/js/dataFilter.js"></script>
+    <script src="https://elidrissilaoukili.netlify.app/assets/js/currentYearLoader.js"></script>
+    <script src="https://elidrissilaoukili.netlify.app/assets/js/dropmenu.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> -->
+    <script>AOS.init(); </script>
+</body>
+
+</html>
