@@ -118,7 +118,21 @@
     <div class="programiz">
         <div class="programiz-container">
             <div class="projects-container" id="projects-container">
-                <p id="loading-text">Loading...</p> <!-- Loading text while fetching -->
+                <p id="loading-text">
+                    <div class="min-h-80 max-h-100 flex justify-center items-center">
+                        <div class="relative flex justify-center items-center">
+                            <!-- Spinner -->
+                            <div class="absolute animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-gray-500"></div>
+
+                            <!-- Avatar Image -->
+                            <img 
+                                src="https://elidrissilaoukili.netlify.app/assets/images/global/avatar-thinking.svg" 
+                                alt="Loading avatar" 
+                                class="rounded-full h-28 w-28"
+                            />
+                        </div>
+                    </div>
+                </p>
             </div>
         </div>
     </div>
