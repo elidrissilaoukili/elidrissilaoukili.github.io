@@ -1,310 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohammed El Idrissi Laoukili - AI & Software Engineer</title>
 
-    <link rel="icon" type="image/png" href="https://elidrissilaoukili.netlify.app/assets/images/global/favicon.png">
+    <link rel="icon" type="image/png" href="https://elidrissilaoukili.netlify.app/assets/images/global/favicon.png" />
 
-    <meta name="description" content="Mohammed El Idrissi Laoukili - AI Developer and Software Engineer specializing in Machine Learning, Spring Boot, React.js, and Laravel. Explore my projects and skills.">
-    <meta name="keywords" content="Mohammed El Idrissi Laoukili, AI Developer, Software Engineer, Machine Learning, java, Spring Boot, React.js, Laravel, Laravel 11, Morocco">
-    <meta name="author" content="Mohammed El Idrissi Laoukili">
-    
+    <meta name="description" content="Mohammed El Idrissi Laoukili - AI Developer and Software Engineer specializing in Machine Learning, Spring Boot, React.js, and Laravel. Explore my projects and skills." />
+    <meta name="keywords" content="Mohammed El Idrissi Laoukili, AI Developer, Software Engineer, Machine Learning, java, Spring Boot, React.js, Laravel, Laravel 11, Morocco" />
+    <meta name="author" content="Mohammed El Idrissi Laoukili" />
+
     <!-- Open Graph for better social media visibility -->
-    <meta property="og:title" content="Mohammed El Idrissi Laoukili - AI & Software Engineer">
-    <meta property="og:description" content="Explore my projects in AI, Machine Learning, Spring Boot, React.js, and Laravel.">
-    <meta property="og:image" content="https://elidrissilaoukili.netlify.app/assets/images/global/meee.jpg">
-    <meta property="og:url" content="https://elidrissilaoukili.github.io">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mohammed El Idrissi Laoukili - AI & Software Engineer" />
+    <meta property="og:description" content="Explore my projects in AI, Machine Learning, Spring Boot, React.js, and Laravel." />
+    <meta property="og:image" content="https://elidrissilaoukili.netlify.app/assets/images/global/meee.jpg" />
+    <meta property="og:url" content="https://elidrissilaoukili.github.io" />
+    <meta property="og:type" content="website" />
 
     <!-- Schema Markup for better SEO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mohammed El Idrissi Laoukili",
-      "jobTitle": "AI Developer & Software Engineer",
-      "url": "https://elidrissilaoukili.github.io",
-      "sameAs": [
-        "https://github.com/elidrissilaoukili",
-        "https://www.linkedin.com/in/elidrissilaoukili",
-        "https://www.instagram.com/__elidrissii",
-        "https://www.youtube.com/@idricoding"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohammed El Idrissi Laoukili",
+        "jobTitle": "AI Developer & Software Engineer",
+        "url": "https://elidrissilaoukili.github.io",
+        "sameAs": ["https://github.com/elidrissilaoukili", "https://www.linkedin.com/in/elidrissilaoukili", "https://www.instagram.com/__elidrissii", "https://www.youtube.com/@idricoding"]
+      }
     </script>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/circle.css">
-    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/style.css">
-    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/footer.css">
+    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/circle.css" />
+    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/style.css" />
+    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/footer.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/work.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/work.css" />
+  </head>
 
-<body class="bg-gray-100 text-gray-900">
-
+  <body class="bg-gray-100 text-gray-900">
     <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
     <header>
-        <!-- Navbar -->
-        <nav class="fixed top-0 w-full bg-white shadow-md py-4 px-6 z-50 bg-opacity-80">
-            <div class="container mx-auto flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-blue-600">Idricodi</a>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="/" class="hover:text-blue-600">Home</a></li>
-                    <li><a href="./projects.html" class="hover:text-blue-600">Projects</a></li>
-                    <li><a href="./skills.html" class="hover:text-blue-600">Skills</a></li>
-                    <li><a href="./terminalprojects.html" class="hover:text-blue-600">Terminal Projects</a></li>
-                </ul>
-                <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
-            </div>
-        </nav>
-    
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" style="z-index: 100;" class="hidden md:hidden fixed top-16 left-0 w-full bg-white shadow-md bg-opacity-80">
-            <ul class="">
-                <li><a href="/" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Home</a></li>
-                <li><a href="./projects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Projects</a></li>
-                <li><a href="./skills.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Skills</a></li>
-                <li><a href="./terminalprojects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Terminal Projects</a></li>
-            </ul>
+      <!-- Navbar -->
+      <nav class="fixed top-0 w-full bg-white shadow-md py-4 px-6 z-50 bg-opacity-80">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="/" class="text-2xl font-bold text-blue-600">Idricodi</a>
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li><a href="./projects.html" class="hover:text-blue-600">Projects</a></li>
+            <li><a href="./skills.html" class="hover:text-blue-600">Skills</a></li>
+            <li><a href="./terminalprojects.html" class="hover:text-blue-600">Terminal Projects</a></li>
+          </ul>
+          <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
         </div>
-</header>
+      </nav>
 
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" style="z-index: 100" class="hidden md:hidden fixed top-16 left-0 w-full bg-white shadow-md bg-opacity-80">
+        <ul class="">
+          <li><a href="/" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Home</a></li>
+          <li><a href="./projects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Projects</a></li>
+          <li><a href="./skills.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Skills</a></li>
+          <li><a href="./terminalprojects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Terminal Projects</a></li>
+        </ul>
+      </div>
+    </header>
 
     <!-- 3D Cube -->
-    <div style="z-index: -1;"
-        class="mt-12 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
-        <canvas id="canvas" class="w-80 h-80 animate-slide-in-left">
-            ></canvas>
+    <div style="z-index: -1" class="mt-12 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+      <canvas id="canvas" class="w-80 h-80 animate-slide-in-left"> ></canvas>
     </div>
 
     <section class="mt-8 mb-8 max-width-900">
-        <h3 class="text-2xl font-bold mb-4 ml-1">Backend Skills</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/java.png" alt="PHP">
-                <p class="mt-2">Java</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/spring-boot.png" alt="PHP">
-                <p class="mt-2">Spring boot</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/ibmcplex.png" alt="PHP">
-                <p class="mt-2">IBM CPLEX</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/php.png" alt="PHP">
-                <p class="mt-2">PHP</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/laravel.png" alt="Laravel">
-                <p class="mt-2">Laravel</p>
-            </div>
+      <h3 class="text-2xl font-bold mb-4 ml-1">Backend Skills</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/java.png" alt="PHP" />
+          <p class="mt-2">Java</p>
         </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/spring-boot.png" alt="PHP" />
+          <p class="mt-2">Spring boot</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/ibmcplex.png" alt="PHP" />
+          <p class="mt-2">IBM CPLEX</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/php.png" alt="PHP" />
+          <p class="mt-2">PHP</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/laravel.png" alt="Laravel" />
+          <p class="mt-2">Laravel</p>
+        </div>
+      </div>
     </section>
 
     <section class="mt-8 mb-8 max-width-900">
-        <h3 class="text-2xl font-bold mb-4 ml-1">Databases</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/sql.png" alt="PHP">
-                <p class="mt-2">SQL</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/mysql.png" alt="PHP">
-                <p class="mt-2">MySQL</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/postgreSQL.png" alt="PHP">
-                <p class="mt-2">PL/SQL</p>
-            </div>
+      <h3 class="text-2xl font-bold mb-4 ml-1">Databases</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/sql.png" alt="PHP" />
+          <p class="mt-2">SQL</p>
         </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/mysql.png" alt="PHP" />
+          <p class="mt-2">MySQL</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/postgreSQL.png" alt="PHP" />
+          <p class="mt-2">PL/SQL</p>
+        </div>
+      </div>
     </section>
 
     <section class="mt-8 mb-8 max-width-900">
-        <h3 class="text-2xl font-bold mb-4 ml-1">Main Frontend Skills</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/javascript-modern.png" alt="JavaScript">
-                <p class="mt-2">JavaScript</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/typescripte.png" alt="HTML">
-                <p class="mt-2">Typescripte</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/reactjs.png" alt="ReactJS">
-                <p class="mt-2">ReactJS</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/ajax.png" alt="AJAX">
-                <p class="mt-2">AJAX</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/jquery.png" alt="jQuery">
-                <p class="mt-2">jQuery</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/css.png" alt="CSS">
-                <p class="mt-2">CSS</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/bootstrap.png" alt="Bootstrap">
-                <p class="mt-2">Bootstrap</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/html.png" alt="HTML">
-                <p class="mt-2">HTML</p>
-            </div>
+      <h3 class="text-2xl font-bold mb-4 ml-1">Main Frontend Skills</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/javascript-modern.png" alt="JavaScript" />
+          <p class="mt-2">JavaScript</p>
         </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/typescripte.png" alt="HTML" />
+          <p class="mt-2">Typescripte</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/reactjs.png" alt="ReactJS" />
+          <p class="mt-2">ReactJS</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/ajax.png" alt="AJAX" />
+          <p class="mt-2">AJAX</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/jquery.png" alt="jQuery" />
+          <p class="mt-2">jQuery</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/css.png" alt="CSS" />
+          <p class="mt-2">CSS</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/bootstrap.png" alt="Bootstrap" />
+          <p class="mt-2">Bootstrap</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/html.png" alt="HTML" />
+          <p class="mt-2">HTML</p>
+        </div>
+      </div>
     </section>
 
     <section class="mt-8 mb-8 max-width-900">
-        <h3 class="text-2xl font-bold mb-4 ml-1">Programming Languages</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/python.png" alt="JavaScript">
-                <p class="mt-2">Python</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/c.png" alt="JavaScript">
-                <p class="mt-2">C lang</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/c++.png" alt="JavaScript">
-                <p class="mt-2">C++ lang</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/javascript-modern.png" alt="JavaScript">
-                <p class="mt-2">JavaScript</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/typescripte.png" alt="HTML">
-                <p class="mt-2">Typescripte</p>
-            </div>
+      <h3 class="text-2xl font-bold mb-4 ml-1">Programming Languages</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/python.png" alt="JavaScript" />
+          <p class="mt-2">Python</p>
         </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/c.png" alt="JavaScript" />
+          <p class="mt-2">C lang</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/c++.png" alt="JavaScript" />
+          <p class="mt-2">C++ lang</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/javascript-modern.png" alt="JavaScript" />
+          <p class="mt-2">JavaScript</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/typescripte.png" alt="HTML" />
+          <p class="mt-2">Typescripte</p>
+        </div>
+      </div>
     </section>
 
     <section class="mt-8 mb-8 max-width-900">
-        <h3 class="text-2xl font-bold mb-4 ml-1">Softwares</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/powerpoint.png" alt="JavaScript">
-                <p class="mt-2">Powerpoint</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/word.png" alt="JavaScript">
-                <p class="mt-2">Word</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/excel.png" alt="JavaScript">
-                <p class="mt-2">Excel</p>
-            </div>
-            <h1 class="text-2xl">and more</h1>
+      <h3 class="text-2xl font-bold mb-4 ml-1">Softwares</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/powerpoint.png" alt="JavaScript" />
+          <p class="mt-2">Powerpoint</p>
         </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/word.png" alt="JavaScript" />
+          <p class="mt-2">Word</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/excel.png" alt="JavaScript" />
+          <p class="mt-2">Excel</p>
+        </div>
+        <h1 class="text-2xl">and more</h1>
+      </div>
     </section>
 
     <section class="mt-8 mb-8 max-width-900">
-        <h3 class="text-2xl font-bold mb-4 ml-1">Others</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/collaborating.png" alt="JavaScript">
-                <p class="mt-2">Collaborating</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/fix-debugging.png" alt="JavaScript">
-                <p class="mt-2">Fix & Debugging</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/managment.png" alt="JavaScript">
-                <p class="mt-2">Managment</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/solutions.png" alt="JavaScript">
-                <p class="mt-2">Solutions</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16 bg-black rounded-full" src="https://elidrissilaoukili.netlify.app/assets/images/skills/github.png" alt="JavaScript">
-                <p class="mt-2">Github</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/linux.png" alt="JavaScript">
-                <p class="mt-2">Linux</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/algorithm.png" alt="JavaScript">
-                <p class="mt-2">Algorithm</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/figma.png" alt="JavaScript">
-                <p class="mt-2">figma</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/office.png" alt="JavaScript">
-                <p class="mt-2">office</p>
-            </div>
+      <h3 class="text-2xl font-bold mb-4 ml-1">Others</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/collaborating.png" alt="JavaScript" />
+          <p class="mt-2">Collaborating</p>
         </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/fix-debugging.png" alt="JavaScript" />
+          <p class="mt-2">Fix & Debugging</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/managment.png" alt="JavaScript" />
+          <p class="mt-2">Managment</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/solutions.png" alt="JavaScript" />
+          <p class="mt-2">Solutions</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16 bg-black rounded-full" src="https://elidrissilaoukili.netlify.app/assets/images/skills/github.png" alt="JavaScript" />
+          <p class="mt-2">Github</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/linux.png" alt="JavaScript" />
+          <p class="mt-2">Linux</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/algorithm.png" alt="JavaScript" />
+          <p class="mt-2">Algorithm</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/figma.png" alt="JavaScript" />
+          <p class="mt-2">figma</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-16 h-16" src="https://elidrissilaoukili.netlify.app/assets/images/skills/office.png" alt="JavaScript" />
+          <p class="mt-2">office</p>
+        </div>
+      </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="bg-white shadow-md mt-12 py-6 text-center">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap justify-center gap-4 mb-4">
-                <a href="https://github.com/elidrissilaoukili" target="_blank" rel="noopener noreferrer"
-                    class="text-gray-600 hover:text-blue-600">GitHub</a>
-                <a href="https://codepen.io/elidrissilaoukili" target="_blank" rel="noopener noreferrer"
-                    class="text-gray-600 hover:text-blue-600">CodePen</a>
-                <a href="https://www.linkedin.com/in/elidrissilaoukili" target="_blank" rel="noopener noreferrer"
-                    class="text-gray-600 hover:text-blue-600">LinkedIn</a>
-                <a href="https://www.instagram.com/__elidrissii" target="_blank" rel="noopener noreferrer"
-                    class="text-gray-600 hover:text-blue-600">Instagram</a>
-                <a href="https://wa.me/212767194500" target="_blank" rel="noopener noreferrer"
-                    class="text-gray-600 hover:text-blue-600">WhatsApp</a>
-                <a href="https://www.youtube.com/@idricoding" target="_blank" rel="noopener noreferrer"
-                    class="text-gray-600 hover:text-blue-600">YouTube</a>
-            </div>
-            <div class="text-sm text-gray-500 flex flex-col items-center space-y-1">
-                <a href="mailto:elidrissilaoukili@gmail.com" class="flex items-center space-x-2">
-                    ✉️ <span>elidrissilaoukili@gmail.com</span>
-                </a>
-                <a href="tel:+212767194500" class="flex items-center space-x-2">
-                    📞 <span>+212 767194500</span>
-                </a>
-            </div>
-            <p class="text-xs text-gray-400 mt-4">&copy; <span id="year"></span> All rights reserved.</p>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-wrap justify-center gap-4 mb-4">
+          <a href="https://github.com/elidrissilaoukili" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">GitHub</a>
+          <a href="https://codepen.io/elidrissilaoukili" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">CodePen</a>
+          <a href="https://www.linkedin.com/in/elidrissilaoukili" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">LinkedIn</a>
+          <a href="https://www.instagram.com/__elidrissii" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">Instagram</a>
+          <a href="https://wa.me/212767194500" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">WhatsApp</a>
+          <a href="https://www.youtube.com/@idricoding" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">YouTube</a>
         </div>
+        <div class="text-sm text-gray-500 flex flex-col items-center space-y-1">
+          <a href="mailto:elidrissilaoukili@gmail.com" class="flex items-center space-x-2"> ✉️ <span>elidrissilaoukili@gmail.com</span> </a>
+          <a href="tel:+212767194500" class="flex items-center space-x-2"> 📞 <span>+212 767194500</span> </a>
+        </div>
+        <p class="text-xs text-gray-400 mt-4">&copy; <span id="year"></span> All rights reserved.</p>
+      </div>
     </footer>
 
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
     <script src="https://elidrissilaoukili.netlify.app/assets/js/cube.js"></script>
     <script src="https://elidrissilaoukili.netlify.app/assets/js/dropmenu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
-</body>
-
+  </body>
 </html>
