@@ -54,28 +54,28 @@
     <header>
       <!-- Navbar -->
       <nav class="fixed top-0 w-full bg-white shadow-md py-4 px-6 z-50 bg-opacity-80">
-          <div class="container mx-auto flex justify-between items-center">
-              <a href="/" class="text-2xl font-bold text-blue-600">Idricodi</a>
-              <ul class="hidden md:flex space-x-6">
-                  <li><a href="/" class="hover:text-blue-600">Home</a></li>
-                  <li><a href="./projects.html" class="hover:text-blue-600">Projects</a></li>
-                  <li><a href="./skills.html" class="hover:text-blue-600">Skills</a></li>
-                  <li><a href="./terminalprojects.html" class="hover:text-blue-600">Terminal Projects</a></li>
-              </ul>
-              <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
-          </div>
-      </nav>
-  
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" style="z-index: 100;" class="hidden md:hidden fixed top-16 left-0 w-full bg-white shadow-md bg-opacity-80">
-          <ul class="">
-              <li><a href="/" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Home</a></li>
-              <li><a href="./projects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Projects</a></li>
-              <li><a href="./skills.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Skills</a></li>
-              <li><a href="./terminalprojects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Terminal Projects</a></li>
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="/" class="text-2xl font-bold text-blue-600">Idricodi</a>
+          <ul class="hidden md:flex space-x-6">
+            <li><a href="/" class="hover:text-blue-600">Home</a></li>
+            <li><a href="./projects.html" class="hover:text-blue-600">Projects</a></li>
+            <li><a href="./skills.html" class="hover:text-blue-600">Skills</a></li>
+            <li><a href="./terminalprojects.html" class="hover:text-blue-600">Terminal Projects</a></li>
           </ul>
+          <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" style="z-index: 100" class="hidden md:hidden fixed top-16 left-0 w-full bg-white shadow-md bg-opacity-80">
+        <ul class="">
+          <li><a href="/" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Home</a></li>
+          <li><a href="./projects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Projects</a></li>
+          <li><a href="./skills.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Skills</a></li>
+          <li><a href="./terminalprojects.html" class="block hover:text-blue-600 hover:bg-gray-100 py-3 px-5">Terminal Projects</a></li>
+        </ul>
       </div>
-  </header>
+    </header>
 
     <!-- Project Details Page -->
     <div class="flex justify-center py-6 px-1 mt-12" id="projectNotFound">
@@ -126,14 +126,37 @@
       <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
 
       <!-- Filter Buttons -->
-      <div class="flex flex-wrap justify-center gap-4 mb-6">
-        <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700" data-filter="all">All</button>
-        <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400" data-filter="springboot">Spring Boot</button>
-        <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400" data-filter="laravel">Laravel</button>
-        <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400" data-filter="nativephp">Native PHP</button>
-        <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400" data-filter="reactjs">React.js</button>
-        <button class="filter-btn px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400" data-filter="templates">Templates</button>
+      <div class="container mx-auto px-4 mb-4">
+        <div class="filter-container overflow-x-auto py-2">
+          <div class="inline-flex flex-nowrap md:flex-wrap md:justify-center gap-2 min-w-full">
+            <button class="filter-btn px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200 whitespace-nowrap font-medium" data-filter="all">All</button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-200 whitespace-nowrap font-medium" data-filter="springboot">Spring Boot</button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-200 whitespace-nowrap font-medium" data-filter="optimization">Optimization</button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-200 whitespace-nowrap font-medium" data-filter="datamodeling">Data Modeling</button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-200 whitespace-nowrap font-medium" data-filter="laravel">Laravel</button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-200 whitespace-nowrap font-medium" data-filter="nativephp">Native PHP</button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-200 whitespace-nowrap font-medium" data-filter="reactjs">React.js</button>
+            <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-200 whitespace-nowrap font-medium" data-filter="templates">Templates</button>
+          </div>
+        </div>
       </div>
+
+      <style>
+        /* Custom scrollbar styles */
+        .filter-container::-webkit-scrollbar {
+          height: 4px;
+        }
+
+        .filter-container::-webkit-scrollbar-thumb {
+          background-color: #3d4761;
+          border-radius: 10px;
+        }
+
+        .filter-container::-webkit-scrollbar-track {
+          background-color: #f1f1f1;
+          border-radius: 10px;
+        }
+      </style>
 
       <!-- Projects Grid -->
       <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
