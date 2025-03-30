@@ -64,9 +64,19 @@
     <!-- header / footer -->
     <script src="https://elidrissilaoukili.netlify.app/assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/skills-page.css" />
+    <link rel="stylesheet" href="https://elidrissilaoukili.netlify.app/assets/css/cover.css" />
   </head>
 
   <body class="bg-gray-100 text-gray-900">
+    <!-- This is the cover that will be added at the very beginning -->
+    <div id="page-cover">
+      <div id="cover-content">
+        <h2 id="cover-title">Welcome!</h2>
+        <p id="cover-text">Click the button below to view the content of this website.</p>
+        <button id="enter-button">Hi, Let Me In</button>
+      </div>
+    </div>
+
     <!-- Header -->
     <header class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/80 shadow-sm">
       <nav class="container mx-auto px-6 py-4">
@@ -552,7 +562,7 @@
             <form class="bg-white rounded-lg shadow-lg p-8" onsubmit="return false">
               <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
 
-              <p id="status" ></p>
+              <p id="status"></p>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
@@ -674,5 +684,6 @@
         toast.classList.add("opacity-100", "translate-y-0");
       };
     </script>
+
   </body>
 </html>
