@@ -3,963 +3,648 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohammed El Idrissi Laoukili - AI/ML Engineer</title>
+    <title>Mohammed El Idrissi Laoukili — AI/ML Engineer</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://elidrissilaoukili.netlify.app/assets/images/global/favicon.png" />
 
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="Mohammed El Idrissi Laoukili - AI/ML Engineer specializing in Deep Learning, Computer Vision, NLP, and Edge AI. Explore my portfolio and innovative machine learning projects." />
-    <meta name="keywords" content="AI Engineer, Machine Learning Engineer, Deep Learning, Computer Vision, NLP, PyTorch, TensorFlow, Edge AI, Morocco, Python Developer" />
+    <meta name="description" content="Mohammed El Idrissi Laoukili — AI/ML Engineer specializing in Deep Learning, Computer Vision, NLP, and Model Optimization. Portfolio of AI/ML research and full-stack development projects." />
+    <meta name="keywords" content="AI Engineer, Machine Learning Engineer, Deep Learning, Computer Vision, NLP, PyTorch, Model Compression, Morocco" />
     <meta name="author" content="Mohammed El Idrissi Laoukili" />
 
-    <!-- Open Graph for Social Media -->
-    <meta property="og:title" content="Mohammed El Idrissi Laoukili - AI/ML Engineer" />
-    <meta property="og:description" content="Explore my projects in AI, Machine Learning, Deep Learning, Computer Vision, and NLP." />
+    <meta property="og:title" content="Mohammed El Idrissi Laoukili — AI/ML Engineer" />
+    <meta property="og:description" content="AI/ML research and full-stack development portfolio." />
     <meta property="og:image" content="https://elidrissilaoukili.netlify.app/assets/images/global/meee.jpg" />
     <meta property="og:url" content="https://elidrissilaoukili.github.io" />
     <meta property="og:type" content="website" />
 
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://elidrissilaoukili.github.io" />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    
+
     <style>
       :root {
-        --primary: #00ff88;
-        --secondary: #00d4ff;
-        --dark: #0a0e27;
-        --darker: #050714;
-        --accent: #ff006e;
-        --text: #e0e6ed;
-        --text-muted: #8b95a5;
+        --bg: #ffffff;
+        --surface: #f6f7f9;
+        --line: #e6e8ec;
+        --ink: #14161a;
+        --ink-soft: #565c68;
+        --ai: #2952e3;
+        --ai-soft: #eef1fd;
+        --dev: #c96a2e;
+        --dev-soft: #fbf1e8;
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
 
       body {
-        font-family: 'Outfit', sans-serif;
-        background: var(--darker);
-        color: var(--text);
-        overflow-x: hidden;
+        font-family: 'Inter', sans-serif;
+        background: var(--bg);
+        color: var(--ink);
       }
 
-      .font-mono {
+      h1, h2, h3, h4 {
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      .mono { font-family: 'JetBrains Mono', monospace; }
+
+      .container { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+
+      /* Nav */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      nav a.brand {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 600;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      nav .links a {
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.15s ease;
+      }
+      nav .links a:hover { color: var(--ink); }
+
+      /* Badge */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: 999px;
+        padding: 0.35rem 0.85rem;
+        font-size: 0.78rem;
+      }
+      .dot {
+        width: 7px; height: 7px; border-radius: 50%;
+        background: #2ea043;
+        box-shadow: 0 0 0 3px rgba(46,160,67,0.15);
+      }
+
+      /* Hero */
+      .hero-name {
+        font-size: clamp(2.2rem, 5vw, 3.6rem);
+        font-weight: 700;
+        line-height: 1.05;
+      }
+
+      .hero-role {
+        color: var(--ai);
         font-family: 'JetBrains Mono', monospace;
+        font-size: 1rem;
+        font-weight: 500;
       }
 
-      /* Animated grid background */
-      .grid-bg {
-        background-image: 
-          linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
-        background-size: 50px 50px;
-        animation: gridMove 20s linear infinite;
-      }
-
-      @keyframes gridMove {
-        0% { background-position: 0 0; }
-        100% { background-position: 50px 50px; }
-      }
-
-      /* Neural network animation */
-      .neural-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 0;
-        opacity: 0.15;
-      }
-
-      /* Glitch effect */
-      .glitch {
-        position: relative;
-        display: inline-block;
-      }
-
-      .glitch::before,
-      .glitch::after {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.8;
-      }
-
-      .glitch::before {
-        animation: glitch-1 0.3s infinite;
-        color: var(--primary);
-        z-index: -1;
-      }
-
-      .glitch::after {
-        animation: glitch-2 0.3s infinite;
-        color: var(--secondary);
-        z-index: -2;
-      }
-
-      @keyframes glitch-1 {
-        0%, 100% { transform: translate(0); }
-        33% { transform: translate(-2px, 2px); }
-        66% { transform: translate(2px, -2px); }
-      }
-
-      @keyframes glitch-2 {
-        0%, 100% { transform: translate(0); }
-        33% { transform: translate(2px, -2px); }
-        66% { transform: translate(-2px, 2px); }
-      }
-
-      /* Gradient text */
-      .gradient-text {
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      /* Card hover effect */
-      .project-card {
-        position: relative;
-        background: rgba(10, 14, 39, 0.6);
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-      }
-
-      .project-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: -1;
-        border-radius: inherit;
-      }
-
-      .project-card:hover::before {
-        opacity: 1;
-      }
-
-      .project-card:hover {
-        border-color: var(--primary);
-        transform: translateY(-5px);
-      }
-
-      /* Skill bar animation */
-      .skill-bar {
-        height: 4px;
-        background: rgba(0, 255, 136, 0.1);
-        position: relative;
-        overflow: hidden;
-        border-radius: 2px;
-      }
-
-      .skill-fill {
-        height: 100%;
-        background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-        border-radius: 2px;
-        position: relative;
-        transition: width 1s ease;
-      }
-
-      .skill-fill::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        animation: shimmer 2s infinite;
-      }
-
-      @keyframes shimmer {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(100%); }
-      }
-
-      /* Typing cursor */
-      .typing-cursor::after {
-        content: '|';
-        animation: blink 1s infinite;
-        margin-left: 2px;
-      }
-
-      @keyframes blink {
-        0%, 50% { opacity: 1; }
-        51%, 100% { opacity: 0; }
-      }
-
-      /* Button styles */
+      /* Buttons */
       .btn-primary {
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        color: var(--dark);
-        padding: 0.75rem 2rem;
+        background: var(--ink);
+        color: #fff;
+        padding: 0.75rem 1.5rem;
         border-radius: 0.5rem;
         font-weight: 600;
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
         text-decoration: none;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: transform 0.15s ease, background 0.15s ease;
       }
-
-      .btn-primary::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        transition: left 0.3s ease;
-      }
-
-      .btn-primary:hover::before {
-        left: 100%;
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-      }
+      .btn-primary:hover { background: var(--ai); transform: translateY(-2px); }
 
       .btn-secondary {
-        background: transparent;
-        color: var(--primary);
-        padding: 0.75rem 2rem;
+        background: #fff;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        padding: 0.75rem 1.5rem;
         border-radius: 0.5rem;
         font-weight: 600;
-        transition: all 0.3s ease;
-        border: 2px solid var(--primary);
-        cursor: pointer;
         text-decoration: none;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: border-color 0.15s ease, transform 0.15s ease;
       }
+      .btn-secondary:hover { border-color: var(--ink); transform: translateY(-2px); }
 
-      .btn-secondary:hover {
-        background: rgba(0, 255, 136, 0.1);
-        transform: translateY(-2px);
-      }
-
-      /* Section divider */
-      .section-divider {
-        height: 2px;
-        background: linear-gradient(90deg, transparent 0%, var(--primary) 50%, transparent 100%);
-        margin: 4rem 0;
-        opacity: 0.3;
-      }
-
-      /* Fade in animation */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.6s ease forwards;
-      }
-
-      @keyframes fadeIn {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Stagger animation delays */
-      .delay-1 { animation-delay: 0.1s; }
-      .delay-2 { animation-delay: 0.2s; }
-      .delay-3 { animation-delay: 0.3s; }
-      .delay-4 { animation-delay: 0.4s; }
-      .delay-5 { animation-delay: 0.5s; }
-
-      /* Navigation */
-      nav {
-        backdrop-filter: blur(10px);
-        background: rgba(5, 7, 20, 0.8);
-        border-bottom: 1px solid rgba(0, 255, 136, 0.1);
-      }
-
-      nav a {
-        color: var(--text);
-        text-decoration: none;
-        transition: color 0.3s ease;
-        position: relative;
-      }
-
-      nav a::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--primary);
-        transition: width 0.3s ease;
-      }
-
-      nav a:hover {
-        color: var(--primary);
-      }
-
-      nav a:hover::after {
-        width: 100%;
-      }
-
-      /* Tag styles */
-      .tag {
-        background: rgba(0, 255, 136, 0.1);
-        color: var(--primary);
-        padding: 0.25rem 0.75rem;
-        border-radius: 0.25rem;
-        font-size: 0.75rem;
-        font-weight: 600;
-        border: 1px solid rgba(0, 255, 136, 0.2);
+      /* Section label */
+      .eyebrow {
         font-family: 'JetBrains Mono', monospace;
+        font-size: 0.8rem;
+        color: var(--ai);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
       }
 
-      /* Mobile responsiveness */
-      @media (max-width: 768px) {
-        .grid-bg {
-          background-size: 30px 30px;
-        }
+      section { padding: 5rem 0; }
+      .divider { border-top: 1px solid var(--line); }
+
+      /* Skill chips */
+      .chip-group h4 {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--ink-soft);
+        margin-bottom: 0.75rem;
+      }
+      .chip {
+        display: inline-block;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 0.82rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.4rem;
+        margin: 0 0.4rem 0.4rem 0;
       }
 
-      /* Canvas for neural network */
-      #neuralCanvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
+      /* Project cards */
+      .project-card {
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        background: #fff;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+        border-left: 3px solid var(--line);
         height: 100%;
-        pointer-events: none;
-        z-index: 0;
+      }
+      .project-card:hover {
+        box-shadow: 0 8px 24px rgba(20, 22, 26, 0.06);
+        transform: translateY(-3px);
+      }
+      .project-card.ai { border-left-color: var(--ai); }
+      .project-card.dev { border-left-color: var(--dev); }
+
+      .tag-year {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        color: var(--ink-soft);
+      }
+
+      .stack-tag {
+        font-size: 0.72rem;
+        font-family: 'JetBrains Mono', monospace;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 0.3rem;
+        padding: 0.15rem 0.5rem;
+        color: var(--ink-soft);
+      }
+
+      .cat-heading {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 1.75rem;
+      }
+      .cat-dot { width: 10px; height: 10px; border-radius: 2px; }
+      .cat-dot.ai { background: var(--ai); }
+      .cat-dot.dev { background: var(--dev); }
+
+      /* Contact */
+      .contact-card {
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 2.5rem;
+        background: var(--surface);
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.85rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        background: #fff;
+        text-decoration: none;
+        color: var(--ink);
+        font-size: 0.9rem;
+        transition: border-color 0.15s ease, transform 0.15s ease;
+      }
+      .social-link:hover { border-color: var(--ai); transform: translateY(-2px); }
+
+      footer { border-top: 1px solid var(--line); padding: 2rem 0; }
+
+      @media (prefers-reduced-motion: reduce) {
+        * { transition: none !important; animation: none !important; }
       }
     </style>
   </head>
 
-  <body class="grid-bg">
-    <!-- Neural Network Background -->
-    <canvas id="neuralCanvas"></canvas>
-
+  <body>
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50">
-      <div class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-          <a href="/" class="text-xl font-bold font-mono gradient-text">
-            &lt;ML_Engineer /&gt;
-          </a>
-
-          <ul class="hidden md:flex space-x-8 font-mono text-sm">
-            <li><a href="#home">home()</a></li>
-            <li><a href="#about">about()</a></li>
-            <li><a href="#skills">skills()</a></li>
-            <li><a href="#projects">projects()</a></li>
-            <li><a href="#contact">contact()</a></li>
-          </ul>
-
-          <button id="menu-btn" class="md:hidden text-primary">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
+    <nav>
+      <div class="container flex justify-between items-center py-4">
+        <a href="#home" class="brand text-lg">Mohammed E.L.</a>
+        <ul class="links hidden md:flex gap-8">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#ai-projects">AI/ML</a></li>
+          <li><a href="#dev-projects">Development</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-darker border-t border-primary/20">
-        <ul class="py-2 font-mono text-sm">
-          <li><a href="#home" class="block px-6 py-3 hover:bg-primary/10">home()</a></li>
-          <li><a href="#about" class="block px-6 py-3 hover:bg-primary/10">about()</a></li>
-          <li><a href="#skills" class="block px-6 py-3 hover:bg-primary/10">skills()</a></li>
-          <li><a href="#projects" class="block px-6 py-3 hover:bg-primary/10">projects()</a></li>
-          <li><a href="#contact" class="block px-6 py-3 hover:bg-primary/10">contact()</a></li>
+      <div id="mobile-menu" class="hidden md:hidden border-t" style="border-color: var(--line);">
+        <ul class="py-2">
+          <li><a href="#about" class="block px-6 py-3 hover:bg-gray-50">About</a></li>
+          <li><a href="#skills" class="block px-6 py-3 hover:bg-gray-50">Skills</a></li>
+          <li><a href="#ai-projects" class="block px-6 py-3 hover:bg-gray-50">AI/ML</a></li>
+          <li><a href="#dev-projects" class="block px-6 py-3 hover:bg-gray-50">Development</a></li>
+          <li><a href="#contact" class="block px-6 py-3 hover:bg-gray-50">Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20 px-6">
-      <div class="container mx-auto relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <div class="fade-in">
-            <p class="text-primary font-mono mb-4 text-sm">&gt; print("Hello, World!")</p>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">
-              <span class="glitch gradient-text" data-text="Mohammed El Idrissi Laoukili">Mohammed El Idrissi Laoukili</span>
-            </h1>
+    <!-- Hero -->
+    <section id="home" class="pt-16 pb-8">
+      <div class="container">
+        <div class="max-w-3xl">
+          <div class="badge mb-6">
+            <span class="dot"></span> Available — Machine Learning Engineer
           </div>
-          
-          <div class="fade-in delay-2 mb-8">
-            <div class="text-2xl md:text-4xl font-bold mb-4 typing-cursor" id="typing-text">
-              AI/ML Engineer
-            </div>
-          </div>
-
-          <div class="fade-in delay-3 mb-12">
-            <p class="text-lg md:text-xl text-text-muted max-w-2xl mx-auto leading-relaxed">
-              Master's student specializing in <span class="text-primary">Deep Learning</span>, 
-              <span class="text-secondary">Computer Vision</span>, and 
-              <span class="text-accent">NLP</span>. Building intelligent systems that push the boundaries of what's possible.
-            </p>
-          </div>
-
-          <div class="fade-in delay-4 flex flex-wrap gap-4 justify-center mb-12">
-            <a href="#projects" class="btn-primary">
-              <i class="fas fa-brain mr-2"></i>View Projects
-            </a>
-            <a href="/assets/docs/elidrissilaoukili-cv.pdf" class="btn-secondary">
-              <i class="fas fa-download mr-2"></i>Download CV
-            </a>
-          </div>
-
-          <div class="fade-in delay-5 flex gap-6 justify-center">
-            <a href="https://github.com/elidrissilaoukili" target="_blank" class="text-2xl text-text-muted hover:text-primary transition">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/elidrissilaoukili" target="_blank" class="text-2xl text-text-muted hover:text-primary transition">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.youtube.com/@idricoding" target="_blank" class="text-2xl text-text-muted hover:text-primary transition">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 px-6 relative z-10">
-      <div class="container mx-auto max-w-6xl">
-        <div class="mb-16 text-center">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="font-mono text-primary">//</span> About <span class="gradient-text">Me</span>
-          </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="fade-in">
-            <div class="relative">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 blur-3xl"></div>
-              <img src="https://elidrissilaoukili.netlify.app/assets/images/global/me.jpg" 
-                   alt="Mohammed El Idrissi Laoukili" 
-                   class="relative rounded-2xl w-full shadow-2xl border-2 border-primary/20" />
-              <div class="absolute -bottom-4 -right-4 bg-darker border-2 border-primary rounded-lg p-4 font-mono">
-                <div class="flex items-center gap-2">
-                  <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                  <span class="text-sm">Available for Work</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="fade-in delay-2">
-            <h3 class="text-2xl md:text-3xl font-bold mb-4">Master's in Machine Learning & Multimedia Intelligence</h3>
-            <p class="text-text-muted mb-6 leading-relaxed">
-              I'm an AI/ML engineer passionate about developing intelligent systems that solve real-world problems. 
-              My expertise spans deep learning, computer vision, natural language processing, and edge AI deployment.
-            </p>
-            
-            <p class="text-text-muted mb-6 leading-relaxed">
-              Currently pursuing my Master's at Sidi Mohammed Ben Abdellah University, I focus on building 
-              state-of-the-art models and deploying them in production environments. My work combines 
-              theoretical foundations with practical implementation.
-            </p>
-
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-primary"></i>
-                <span class="text-sm">Deep Learning</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-primary"></i>
-                <span class="text-sm">Computer Vision</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-primary"></i>
-                <span class="text-sm">NLP & LLMs</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-primary"></i>
-                <span class="text-sm">Edge AI & IoT</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-primary"></i>
-                <span class="text-sm">PyTorch & TensorFlow</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fas fa-check-circle text-primary"></i>
-                <span class="text-sm">MLOps & Deployment</span>
-              </div>
-            </div>
-
-            <div class="font-mono text-sm text-primary mb-4">
-              <span class="text-text-muted">Career Interest:</span> Machine Learning Engineer Intern
-            </div>
-          </div>
-        </div>
-
-        <div class="section-divider"></div>
-
-        <!-- What Drives Me -->
-        <div class="mt-20">
-          <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">
-            What <span class="gradient-text">Drives</span> Me
-          </h3>
-
-          <div class="grid md:grid-cols-4 gap-6">
-            <div class="project-card rounded-xl p-6 text-center fade-in">
-              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                <i class="fas fa-brain text-3xl text-primary"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-3">AI Innovation</h4>
-              <p class="text-text-muted text-sm">
-                Pushing boundaries in machine learning to create intelligent solutions for complex problems.
-              </p>
-            </div>
-
-            <div class="project-card rounded-xl p-6 text-center fade-in delay-1">
-              <div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-4 mx-auto">
-                <i class="fas fa-flask text-3xl text-secondary"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-3">Research Mindset</h4>
-              <p class="text-text-muted text-sm">
-                Exploring cutting-edge research and implementing novel architectures from academic papers.
-              </p>
-            </div>
-
-            <div class="project-card rounded-xl p-6 text-center fade-in delay-2">
-              <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 mx-auto">
-                <i class="fas fa-rocket text-3xl text-accent"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-3">Production Focus</h4>
-              <p class="text-text-muted text-sm">
-                Building models that work in real-world scenarios with attention to performance and scalability.
-              </p>
-            </div>
-
-            <div class="project-card rounded-xl p-6 text-center fade-in delay-3">
-              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                <i class="fas fa-graduation-cap text-3xl text-primary"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-3">Continuous Learning</h4>
-              <p class="text-text-muted text-sm">
-                Staying current with the latest developments in AI/ML through constant experimentation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6 relative z-10">
-      <div class="container mx-auto max-w-6xl">
-        <div class="mb-16 text-center">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="font-mono text-primary">//</span> Technical <span class="gradient-text">Skills</span>
-          </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-        </div>
-
-        <!-- AI/ML Skills -->
-        <div class="mb-12">
-          <h3 class="text-2xl font-bold mb-6 font-mono text-primary">AI/ML & Data Science</h3>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">PyTorch & TensorFlow</span>
-                <span class="text-primary font-mono text-sm">90%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 90%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Deep Learning (CNNs, Transformers)</span>
-                <span class="text-primary font-mono text-sm">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 85%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Computer Vision (OpenCV)</span>
-                <span class="text-primary font-mono text-sm">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 85%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">NLP & LLMs</span>
-                <span class="text-primary font-mono text-sm">80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Scikit-learn & Data Analysis</span>
-                <span class="text-primary font-mono text-sm">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 85%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Edge AI & IoT Deployment</span>
-                <span class="text-primary font-mono text-sm">75%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 75%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Programming Languages -->
-        <div class="mb-12">
-          <h3 class="text-2xl font-bold mb-6 font-mono text-secondary">Programming Languages</h3>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Python (NumPy, Pandas, SciPy)</span>
-                <span class="text-secondary font-mono text-sm">95%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 95%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Java & Spring Boot</span>
-                <span class="text-secondary font-mono text-sm">90%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 90%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">JavaScript/Node.js</span>
-                <span class="text-secondary font-mono text-sm">80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <div class="project-card rounded-xl p-6">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">C/C++</span>
-                <span class="text-secondary font-mono text-sm">75%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 75%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tools & Technologies -->
-        <div>
-          <h3 class="text-2xl font-bold mb-6 font-mono text-accent">DevOps & Tools</h3>
+          <h1 class="hero-name mb-3">Mohammed El Idrissi Laoukili</h1>
+          <p class="hero-role mb-6">AI/ML Engineer — Deep Learning · Computer Vision · NLP</p>
+          <p class="text-lg leading-relaxed mb-8" style="color: var(--ink-soft); max-width: 42rem;">
+            Master's graduate (2026) building and compressing deep learning models — from research on
+            pruning and quantization to full-stack products that ship. I care about models that
+            work well <em>and</em> run efficiently.
+          </p>
           <div class="flex flex-wrap gap-3">
-            <span class="tag">Docker</span>
-            <span class="tag">Git/GitHub</span>
-            <span class="tag">CI/CD</span>
-            <span class="tag">Linux</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">React.js</span>
-            <span class="tag">Next.js</span>
-            <span class="tag">Laravel</span>
-            <span class="tag">IBM CPLEX</span>
-            <span class="tag">Jupyter</span>
-            <span class="tag">Google Colab</span>
+            <a href="#ai-projects" class="btn-primary"><i class="fas fa-brain"></i> View Projects</a>
+            <a href="/assets/docs/elidrissilaoukili-cv.pdf" class="btn-secondary"><i class="fas fa-download"></i> Download CV</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 relative z-10">
-      <div class="container mx-auto max-w-6xl">
-        <div class="mb-16 text-center">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="font-mono text-primary">//</span> Featured <span class="gradient-text">Projects</span>
-          </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+    <!-- About -->
+    <section id="about" class="divider">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-14 items-center">
+          <div>
+            <img src="./me.jpg"
+                 alt="Mohammed El Idrissi Laoukili"
+                 class="rounded-xl w-15 border" style="border-color: var(--line);" />
+          </div>
+          <div>
+            <p class="eyebrow mb-3">About</p>
+            <h2 class="text-3xl font-bold mb-5">Master's in Machine Learning & Multimedia Intelligence</h2>
+            <p class="mb-4 leading-relaxed" style="color: var(--ink-soft);">
+              I'm an AI/ML engineer passionate about building intelligent systems that solve real
+              problems — and making them efficient enough to actually run. My work spans deep
+              learning research, computer vision, NLP, and model optimization, alongside full-stack
+              development experience.
+            </p>
+            <p class="mb-8 leading-relaxed" style="color: var(--ink-soft);">
+              I graduated with my Master's from Sidi Mohammed Ben Abdellah University in 2026,
+              where my final year project studied pruning, quantization, distillation, and other
+              techniques for compressing deep learning models without losing performance.
+            </p>
+            <div class="mono text-sm" style="color: var(--ai);">
+              Career interest: Machine Learning Engineer
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Project 1 -->
-          <div class="project-card rounded-xl p-6 fade-in">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="text-2xl font-bold">LLM & Vision-Language Model Evaluation</h3>
-              <span class="tag">2026</span>
+    <!-- Skills -->
+    <section id="skills" class="divider">
+      <div class="container">
+        <p class="eyebrow mb-3">Skills</p>
+        <h2 class="text-3xl font-bold mb-10">What I work with</h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="chip-group">
+            <h4>Machine Learning & AI</h4>
+            <div>
+              <span class="chip">PyTorch</span>
+              <span class="chip">TensorFlow</span>
+              <span class="chip">Deep Learning (CNNs, Transformers)</span>
+              <span class="chip">Computer Vision (OpenCV)</span>
+              <span class="chip">NLP & LLMs</span>
+              <span class="chip">Scikit-learn</span>
+              <span class="chip">Edge AI & IoT</span>
+              <span class="chip">Model Optimization & Compression</span>
             </div>
-            <p class="text-text-muted mb-4">
-              Systematic evaluation framework using classical benchmarks and RL-based metrics with reproducible 
-              pipelines for multiple LLM architectures.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Transformers</span>
-              <span class="tag">Evaluation</span>
-            </div>
-            <a href="https://github.com/elidrissilaoukili" target="_blank" class="text-primary hover:text-secondary transition font-mono text-sm">
-              View Project <i class="fas fa-arrow-right ml-1"></i>
-            </a>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card rounded-xl p-6 fade-in delay-1">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="text-2xl font-bold">Traffic Sign Recognition System</h3>
-              <span class="tag">2025</span>
+          <div class="chip-group">
+            <h4>Backend Development</h4>
+            <div>
+              <span class="chip">Java (Spring Boot)</span>
+              <span class="chip">Laravel</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">H2 Database</span>
             </div>
-            <p class="text-text-muted mb-4">
-              Ensemble CNN combining ResNet, VGG, and EfficientNet with preprocessing enhancements for 
-              real-time autonomous driving applications.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tag">Deep Learning</span>
-              <span class="tag">CNN</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">Real-time</span>
-            </div>
-            <a href="https://github.com/elidrissilaoukili" target="_blank" class="text-primary hover:text-secondary transition font-mono text-sm">
-              View Project <i class="fas fa-arrow-right ml-1"></i>
-            </a>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card rounded-xl p-6 fade-in delay-2">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="text-2xl font-bold">Breast Cancer Classification</h3>
-              <span class="tag">2025</span>
+          <div class="chip-group">
+            <h4>Frontend Development</h4>
+            <div>
+              <span class="chip">React.js</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML/CSS</span>
+              <span class="chip">Tailwind CSS</span>
             </div>
-            <p class="text-text-muted mb-4">
-              Deep learning pipeline using probability-based feature fusion from DenseNet, ResNet, and Inception 
-              models for medical image analysis.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tag">Medical AI</span>
-              <span class="tag">Transfer Learning</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Healthcare</span>
-            </div>
-            <a href="https://github.com/elidrissilaoukili" target="_blank" class="text-primary hover:text-secondary transition font-mono text-sm">
-              View Project <i class="fas fa-arrow-right ml-1"></i>
-            </a>
           </div>
 
-          <!-- Project 4 -->
-          <div class="project-card rounded-xl p-6 fade-in delay-3">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="text-2xl font-bold">Swin Transformer Vision System</h3>
-              <span class="tag">2025</span>
+          <div class="chip-group">
+            <h4>Tools & DevOps</h4>
+            <div>
+              <span class="chip">Docker</span>
+              <span class="chip">Git/GitHub</span>
+              <span class="chip">CI/CD</span>
+              <span class="chip">Linux</span>
+              <span class="chip">IBM CPLEX</span>
+              <span class="chip">Jupyter</span>
+              <span class="chip">Google Colab</span>
             </div>
-            <p class="text-text-muted mb-4">
-              Hierarchical vision transformer achieving state-of-the-art performance on ImageNet, COCO, 
-              and ADE20K benchmarks.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI/ML Projects -->
+    <section id="ai-projects" class="divider">
+      <div class="container">
+        <div class="cat-heading">
+          <span class="cat-dot ai"></span>
+          <p class="eyebrow" style="color: var(--ai);">AI/ML Research</p>
+        </div>
+        <h2 class="text-3xl font-bold mb-10">Machine learning projects</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="project-card ai">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Efficient Deep Learning: Model Optimization & Compression</h3>
+              <span class="tag-year">2026</span>
+            </div>
+            <p class="text-xs mb-3" style="color: var(--ai);">Master's Final Year Project</p>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Experimental study of DL compression techniques — pruning, quantization, knowledge
+              distillation, low-rank factorization (LoRA/QLoRA), weight sharing, NAS, and early
+              exit — evaluating trade-offs between accuracy and computational efficiency.
             </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tag">Transformers</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Vision</span>
-              <span class="tag">SOTA</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">PyTorch</span>
             </div>
-            <a href="https://github.com/elidrissilaoukili" target="_blank" class="text-primary hover:text-secondary transition font-mono text-sm">
-              View Project <i class="fas fa-arrow-right ml-1"></i>
-            </a>
           </div>
 
-          <!-- Project 5 -->
-          <div class="project-card rounded-xl p-6 fade-in delay-4">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="text-2xl font-bold">Edge AI Face Recognition</h3>
-              <span class="tag">2025</span>
+          <div class="project-card ai">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">LLM & Vision-Language Model Evaluation</h3>
+              <span class="tag-year">2026</span>
             </div>
-            <p class="text-text-muted mb-4">
-              Embedded face recognition system using ESP32-CAM and Edge Impulse with real-time processing 
-              for IoT applications.
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Systematic evaluation framework using classical benchmarks and RL-based metrics with
+              reproducible pipelines for multiple LLM architectures.
             </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tag">Edge AI</span>
-              <span class="tag">IoT</span>
-              <span class="tag">ESP32</span>
-              <span class="tag">TinyML</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">PyTorch</span>
+              <span class="stack-tag">Transformers</span>
             </div>
-            <a href="https://github.com/elidrissilaoukili" target="_blank" class="text-primary hover:text-secondary transition font-mono text-sm">
-              View Project <i class="fas fa-arrow-right ml-1"></i>
-            </a>
           </div>
 
-          <!-- Project 6 -->
-          <div class="project-card rounded-xl p-6 fade-in delay-5">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="text-2xl font-bold">University Timetabling Optimization</h3>
-              <span class="tag">2024</span>
+          <div class="project-card ai">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Traffic Sign Recognition System</h3>
+              <span class="tag-year">2025</span>
             </div>
-            <p class="text-text-muted mb-4">
-              Advanced scheduling system using Integer Programming and IBM CPLEX solver integrated with 
-              Spring Boot backend for complex constraint satisfaction.
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Ensemble CNN combining ResNet, VGG, and EfficientNet for real-time autonomous
+              driving applications.
             </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="tag">Optimization</span>
-              <span class="tag">CPLEX</span>
-              <span class="tag">Java</span>
-              <span class="tag">Algorithms</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Deep Learning</span>
+              <span class="stack-tag">CNN</span>
+              <span class="stack-tag">OpenCV</span>
             </div>
-            <a href="https://github.com/elidrissilaoukili" target="_blank" class="text-primary hover:text-secondary transition font-mono text-sm">
-              View Project <i class="fas fa-arrow-right ml-1"></i>
-            </a>
+          </div>
+
+          <div class="project-card ai">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Breast Cancer Classification</h3>
+              <span class="tag-year">2025</span>
+            </div>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Deep learning pipeline using probability-based feature fusion from DenseNet, ResNet,
+              and Inception for medical image analysis.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Medical AI</span>
+              <span class="stack-tag">Transfer Learning</span>
+            </div>
+          </div>
+
+          <div class="project-card ai">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Swin Transformer Vision System</h3>
+              <span class="tag-year">2025</span>
+            </div>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Hierarchical vision transformer achieving state-of-the-art performance on ImageNet,
+              COCO, and ADE20K benchmarks.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Transformers</span>
+              <span class="stack-tag">PyTorch</span>
+            </div>
+          </div>
+
+          <div class="project-card ai">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Edge AI Face Recognition</h3>
+              <span class="tag-year">2025</span>
+            </div>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Embedded face recognition system using ESP32-CAM and Edge Impulse with real-time
+              processing for IoT applications.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Edge AI</span>
+              <span class="stack-tag">ESP32</span>
+              <span class="stack-tag">TinyML</span>
+            </div>
+          </div>
+
+          <div class="project-card ai">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">University Timetabling Optimization</h3>
+              <span class="tag-year">2024</span>
+            </div>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Scheduling system using Integer Programming and the IBM CPLEX solver, integrated
+              with a Spring Boot backend.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Optimization</span>
+              <span class="stack-tag">CPLEX</span>
+              <span class="stack-tag">Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Projects -->
+    <section id="dev-projects" class="divider">
+      <div class="container">
+        <div class="cat-heading">
+          <span class="cat-dot dev"></span>
+          <p class="eyebrow" style="color: var(--dev);">Development</p>
+        </div>
+        <h2 class="text-3xl font-bold mb-10">Full-stack projects</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="project-card dev">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Medical Platform</h3>
+              <span class="tag-year">2025</span>
+            </div>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Platform for appointment booking, patient tracking, and messaging.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Spring Boot</span>
+              <span class="stack-tag">Next.js</span>
+            </div>
+          </div>
+
+          <div class="project-card dev">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Subscription Tracker System</h3>
+              <span class="tag-year">2025</span>
+            </div>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              System to manage and track recurring subscriptions.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Spring Boot</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">H2 Database</span>
+            </div>
+          </div>
+
+          <div class="project-card dev">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">E-commerce Website</h3>
+              <span class="tag-year">2024</span>
+            </div>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Full-stack online store with product catalog, cart, and orders.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Laravel 11</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">React</span>
+            </div>
+          </div>
+
+          <div class="project-card dev">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-lg font-bold">Rental Website</h3>
+              <span class="tag-year">2024</span>
+            </div>
+            <p class="text-xs mb-3" style="color: var(--dev);">Bachelor's Final Year Project</p>
+            <p class="text-sm mb-4" style="color: var(--ink-soft);">
+              Platform for listing and renting properties and items.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="stack-tag">Full-stack web app</span>
+            </div>
           </div>
         </div>
 
         <div class="text-center mt-12">
-          <a href="https://github.com/elidrissilaoukili" target="_blank" class="btn-primary">
-            <i class="fab fa-github mr-2"></i>View All Projects on GitHub
+          <a href="https://github.com/elidrissilaoukili" target="_blank" class="btn-secondary">
+            <i class="fab fa-github"></i> View all on GitHub
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 relative z-10">
-      <div class="container mx-auto max-w-4xl">
-        <div class="mb-16 text-center">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="font-mono text-primary">//</span> Get In <span class="gradient-text">Touch</span>
-          </h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
-          <p class="text-text-muted">
-            Interested in collaboration or have a project in mind? Let's connect!
-          </p>
-        </div>
+    <!-- Contact -->
+    <section id="contact" class="divider">
+      <div class="container">
+        <p class="eyebrow mb-3">Contact</p>
+        <h2 class="text-3xl font-bold mb-10">Get in touch</h2>
 
-        <div class="project-card rounded-xl p-8 md:p-12">
-          <div class="grid md:grid-cols-2 gap-8">
+        <div class="contact-card">
+          <div class="grid md:grid-cols-2 gap-10">
             <div>
-              <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-              
-              <div class="space-y-4">
+              <h3 class="text-xl font-bold mb-6">Contact information</h3>
+              <div class="space-y-5">
                 <div class="flex items-start gap-4">
-                  <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-map-marker-alt text-primary"></i>
-                  </div>
+                  <i class="fas fa-map-marker-alt mt-1" style="color: var(--ai);"></i>
                   <div>
-                    <h4 class="font-semibold mb-1">Location</h4>
-                    <p class="text-text-muted">Fez, Morocco</p>
+                    <div class="text-sm font-semibold">Location</div>
+                    <div class="text-sm" style="color: var(--ink-soft);">Fez, Morocco</div>
                   </div>
                 </div>
-
                 <div class="flex items-start gap-4">
-                  <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-envelope text-primary"></i>
-                  </div>
+                  <i class="fas fa-envelope mt-1" style="color: var(--ai);"></i>
                   <div>
-                    <h4 class="font-semibold mb-1">Email</h4>
-                    <a href="mailto:elidrissilaoukili@gmail.com" class="text-primary hover:text-secondary transition">
-                      elidrissilaoukili@gmail.com
-                    </a>
+                    <div class="text-sm font-semibold">Email</div>
+                    <a href="mailto:elidrissilaoukili@gmail.com" class="text-sm" style="color: var(--ai);">elidrissilaoukili@gmail.com</a>
                   </div>
                 </div>
-
                 <div class="flex items-start gap-4">
-                  <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-phone text-primary"></i>
-                  </div>
+                  <i class="fas fa-phone mt-1" style="color: var(--ai);"></i>
                   <div>
-                    <h4 class="font-semibold mb-1">Phone</h4>
-                    <a href="tel:+212767194500" class="text-primary hover:text-secondary transition">
-                      +212 767 194 500
-                    </a>
+                    <div class="text-sm font-semibold">Phone</div>
+                    <a href="tel:+212767194500" class="text-sm" style="color: var(--ai);">+212 767 194 500</a>
                   </div>
                 </div>
-
-                <div class="flex items-start gap-4">
-                  <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <i class="fab fa-linkedin text-primary"></i>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold mb-1">LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/elidrissilaoukili" target="_blank" class="text-primary hover:text-secondary transition">
-                      linkedin.com/in/elidrissilaoukili
-                    </a>
-                  </div>
-                </div>
+              </div>
+              <div class="mono text-sm mt-8 p-3 rounded" style="background: #fff; border: 1px solid var(--line); color: var(--ai);">
+                $ Looking for: Machine Learning Engineer
               </div>
             </div>
 
             <div>
-              <h3 class="text-2xl font-bold mb-6">Connect With Me</h3>
-              <p class="text-text-muted mb-6">
-                Follow my work and connect on social platforms
-              </p>
-              
-              <div class="flex flex-wrap gap-4">
-                <a href="https://github.com/elidrissilaoukili" target="_blank" 
-                   class="flex-1 min-w-[120px] project-card rounded-lg p-4 text-center hover:border-primary transition">
-                  <i class="fab fa-github text-3xl text-primary mb-2"></i>
-                  <p class="text-sm">GitHub</p>
+              <h3 class="text-xl font-bold mb-6">Connect</h3>
+              <div class="grid grid-cols-2 gap-3">
+                <a href="https://github.com/elidrissilaoukili" target="_blank" class="social-link">
+                  <i class="fab fa-github"></i> GitHub
                 </a>
-                <a href="https://www.linkedin.com/in/elidrissilaoukili" target="_blank" 
-                   class="flex-1 min-w-[120px] project-card rounded-lg p-4 text-center hover:border-primary transition">
-                  <i class="fab fa-linkedin text-3xl text-primary mb-2"></i>
-                  <p class="text-sm">LinkedIn</p>
+                <a href="https://www.youtube.com/@idrilogic" target="_blank" class="social-link">
+                  <i class="fab fa-youtube"></i> YouTube
                 </a>
-                <a href="https://www.youtube.com/@idricoding" target="_blank" 
-                   class="flex-1 min-w-[120px] project-card rounded-lg p-4 text-center hover:border-primary transition">
-                  <i class="fab fa-youtube text-3xl text-primary mb-2"></i>
-                  <p class="text-sm">YouTube</p>
+                <a href="https://www.instagram.com/__elidrissii" target="_blank" class="social-link">
+                  <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://www.instagram.com/__elidrissii" target="_blank" 
-                   class="flex-1 min-w-[120px] project-card rounded-lg p-4 text-center hover:border-primary transition">
-                  <i class="fab fa-instagram text-3xl text-primary mb-2"></i>
-                  <p class="text-sm">Instagram</p>
+                <a href="mailto:elidrissilaoukili@gmail.com" class="social-link">
+                  <i class="fas fa-envelope"></i> Email
                 </a>
-              </div>
-
-              <div class="mt-8 p-4 bg-primary/10 rounded-lg border border-primary/20">
-                <p class="text-sm font-mono">
-                  <span class="text-primary">$</span> Looking for: Machine Learning Engineer Intern
-                </p>
               </div>
             </div>
           </div>
@@ -967,121 +652,17 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8 px-6 border-t border-primary/20 relative z-10">
-      <div class="container mx-auto text-center">
-        <p class="text-text-muted font-mono text-sm">
-          Mohammed El Idrissi Laoukili. Built with <span class="text-accent">❤</span> for AI/ML
-        </p>
+    <footer>
+      <div class="container text-center">
+        <p class="text-sm mono" style="color: var(--ink-soft);">Mohammed El Idrissi Laoukili — built for AI/ML</p>
       </div>
     </footer>
 
-    <!-- Scripts -->
     <script>
-      // Mobile menu toggle
       const menuBtn = document.getElementById('menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
-      
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-      // Typing animation
-      const typingTexts = [
-        'AI/ML Engineer',
-        'Deep Learning Specialist',
-        'Computer Vision Expert',
-        'Python Developer',
-        'Research Enthusiast'
-      ];
-      
-      let textIndex = 0;
-      const typingElement = document.getElementById('typing-text');
-      
-      setInterval(() => {
-        textIndex = (textIndex + 1) % typingTexts.length;
-        typingElement.textContent = typingTexts[textIndex];
-      }, 3000);
-
-      // Neural network canvas animation
-      const canvas = document.getElementById('neuralCanvas');
-      const ctx = canvas.getContext('2d');
-      
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      
-      const nodes = [];
-      const connections = [];
-      const nodeCount = 50;
-      
-      class Node {
-        constructor() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.vx = (Math.random() - 0.5) * 0.5;
-          this.vy = (Math.random() - 0.5) * 0.5;
-          this.radius = 2;
-        }
-        
-        update() {
-          this.x += this.vx;
-          this.y += this.vy;
-          
-          if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-          if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-        }
-        
-        draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(0, 255, 136, 0.5)';
-          ctx.fill();
-        }
-      }
-      
-      for (let i = 0; i < nodeCount; i++) {
-        nodes.push(new Node());
-      }
-      
-      function drawConnections() {
-        for (let i = 0; i < nodes.length; i++) {
-          for (let j = i + 1; j < nodes.length; j++) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 150) {
-              ctx.beginPath();
-              ctx.moveTo(nodes[i].x, nodes[i].y);
-              ctx.lineTo(nodes[j].x, nodes[j].y);
-              ctx.strokeStyle = `rgba(0, 255, 136, ${0.2 - distance / 750})`;
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
-          }
-        }
-      }
-      
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        nodes.forEach(node => {
-          node.update();
-          node.draw();
-        });
-        
-        drawConnections();
-        requestAnimationFrame(animate);
-      }
-      
-      animate();
-      
-      window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      });
-
-      // Smooth scrolling
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -1091,30 +672,6 @@
             mobileMenu.classList.add('hidden');
           }
         });
-      });
-
-      // Animate skill bars on scroll
-      const observerOptions = {
-        threshold: 0.5
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const fills = entry.target.querySelectorAll('.skill-fill');
-            fills.forEach(fill => {
-              const width = fill.style.width;
-              fill.style.width = '0%';
-              setTimeout(() => {
-                fill.style.width = width;
-              }, 100);
-            });
-          }
-        });
-      }, observerOptions);
-      
-      document.querySelectorAll('#skills > div').forEach(section => {
-        observer.observe(section);
       });
     </script>
   </body>
