@@ -38,14 +38,4 @@
         });
     </script>
 </body>
-<script>
-  function sendHeight() {
-    window.parent.postMessage(
-      { type: 'resize', height: document.documentElement.scrollHeight },
-      'https://elidrissilaoukili.github.io'
-    );
-  }
-  window.addEventListener('load', sendHeight);
-  new ResizeObserver(sendHeight).observe(document.body);
-</script>
 </html>
