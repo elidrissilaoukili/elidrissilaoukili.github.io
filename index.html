@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Elidrissi Laoukili</title>
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            /* the iframe handles its own scrolling */
-        }
-
-        iframe {
-            display: block;
-            border: 0;
-            width: 100vw;
-            height: 100vh;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Elidrissi Laoukili</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* the iframe handles its own scrolling */
+    }
+    iframe {
+      display: block;
+      border: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
 </head>
-
 <body>
-    <iframe id="site" src="https://elidrissilaoukili.netlify.app" title="Elidrissi Laoukili Portfolio"
-        allow="clipboard-write; fullscreen"></iframe>
+  <iframe
+    id="site"
+    src="https://elidrissilaoukili.netlify.app"
+    title="Elidrissi Laoukili Portfolio"
+    allow="clipboard-write; fullscreen"
+  ></iframe>
 
-    <script>
-        // Optional: listen for height messages from the Netlify page
-        // (only needed if you want the iframe to resize instead of using 100vh + its own scroll)
-        window.addEventListener('message', (event) => {
-            if (event.origin !== 'https://elidrissilaoukili.netlify.app') return;
-            if (event.data && event.data.type === 'resize') {
-                document.getElementById('site').style.height = event.data.height + 'px';
-            }
-        });
-    </script>
+  <script>
+    // Optional: listen for height messages from the Netlify page
+    // (only needed if you want the iframe to resize instead of using 100vh + its own scroll)
+    window.addEventListener('message', (event) => {
+      if (event.origin !== 'https://elidrissilaoukili.netlify.app') return;
+      if (event.data && event.data.type === 'resize') {
+        document.getElementById('site').style.height = event.data.height + 'px';
+      }
+    });
+  </script>
 </body>
 </html>
